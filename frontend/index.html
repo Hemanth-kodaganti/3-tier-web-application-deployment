@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps Project</title>
+</head>
+<body>
+  <h1>Frontend Running 🚀</h1>
+  <button onclick="callAPI()">Call Backend</button>
+  <p id="output"></p>
+
+  <script>
+    function callAPI() {
+      fetch('/api/message')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("output").innerText = data.message;
+        });
+    }
+  </script>
+</body>
+</html>
